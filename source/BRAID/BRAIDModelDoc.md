@@ -4,12 +4,9 @@ The model learning for `BRAIDModel` is done in 2 main stages and an optional pre
 
 BRAID has two main stages, each incorporating two recursions implemented by `MainModel` class, as explained below:
 
-Note BRAID can learn two sets of recursions termed ''predictior'' and ''generator''. The predictor ($RNN$) learns inference of 1-step-ahead predicted latents'observations as outlined in this document. The generative model ($RNN_{fw}$) propagates the latents inferred by $RNN$ ahead in time to generate data accroding to the learned intrinsic dynamics of mapping $A_{fw}$. Here for brevity we provide formulations in terms of the predictor model. Please refer to the manuscript for more details.
+Note BRAID can learn two sets of recursions termed ''predictior'' and ''generator''. The predictor ($RNN$) learns inference of 1-step-ahead predicted latents'observations as outlined in this document. The generative model ($RNN_{fw}$) propagates the latents inferred by $RNN$ ahead in time to generate data accroding to the learned intrinsic dynamics of mapping $A_{fw}$. Here for brevity we provide formulations in terms of the predictor model. Please refer to the [manuscript](https://openreview.net/forum?id=3usdM1AuI3&referrer=%5Bthe%20profile%20of%20Parsa%20Vahidi%5D(%2Fprofile%3Fid%3D~Parsa_Vahidi1)) for more details.
 
-1. In stage 1, we learn the parameters `A^{(1)}(\cdot)` / `A^{(1)}_{fw}(\cdot)`, `K^{(1)}(\cdot)` / `K^{(1)}_{fw}(\cdot)`, `C^{(1)}_z(\cdot)` of the following `RNN` / `RNN_{fw}`
-
-
-   $A^{(1)}(\cdot)$/$A^{(1)}_{fw}(\cdot)$, $K^{(1)}(\cdot)$/$K^{(1)}_{fw}(\cdot)$, $C^{(1)}_z(\cdot)$ of the following $RNN$/$RNN_{fw}$:
+1. In stage 1, we learn the parameters $A^{(1)}(\cdot)$/$A^{(1)}_{fw}(\cdot)$, $K^{(1)}(\cdot)$/$K^{(1)}_{fw}(\cdot)$, $C^{(1)}_z(\cdot)$ of the following $RNN$/$RNN_{fw}$:
 
     RNN 1:
 
@@ -54,7 +51,7 @@ to learn all neural-relevant dynamics i.e., x^{(0)}_k. Then a readout from these
 $$\hat{z}_k = C_z^{(0)}( x^{(0)}_k)$$
 
 # Forcasting with generative RNNs learned via multi-step-ahead optimization
-MainModel can simultaneously optimizes predictions of multiple steps ahead in the future. For example if the parameter step_ahead is set to [1,2,3], then the loss function includes 1-step, 2-step and 3-step ahead predicition of $z_k$ and $y_k$. This holds for the second stage and preprocessing stage explained below as well.In case user specifies optimization of multi-steps-ahead (parameter steps_ahead), then a generative recursion will be additionally learned for each starge to propagate dynamics forward in time with paramteres $A_{fw}(.)$ and $K_{fw}(.)$  complementing the inferred 1-step-ahead predictions. Please refer to **Methods** section in the manuscript for details.
+MainModel can simultaneously optimizes predictions of multiple steps ahead in the future. For example if the parameter step_ahead is set to [1,2,3], then the loss function includes 1-step, 2-step and 3-step ahead predicition of $z_k$ and $y_k$. This holds for the second stage and preprocessing stage explained below as well. In case user specifies optimization of multi-steps-ahead (parameter steps_ahead), then a generative recursion will be additionally learned for each starge to propagate dynamics forward in time with paramteres $A_{fw}(.)$ and $K_{fw}(.)$  complementing the inferred 1-step-ahead predictions. Please refer to **Methods** section in the manuscript for details.
 
 # Objective function of each optimization step
 For each optimization step, we minimized the mean-squared-error loss between prediction and true values which is equivalent to the negative log-likelihood for isotropic Gaussian-distributed observations.
