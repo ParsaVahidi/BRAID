@@ -6,12 +6,12 @@ Representations***, 2025. URL https://openreview.net/forum?id=3usdM1AuI3.
 
 # Usage examples
 The following notebook contains usage examples of BRAID for several use-cases:
-[source/BRAID/example/BRAID_tutorial.ipynb]
+[source/BRAID/example/BRAID_tutorial.ipynb](source/BRAID/example/BRAID_tutorial.ipynb)
 
-A .py scripty version of the same notebook is also available in the same directory [source/BRAID/example/BRAID_tutorial.py]
+A .py scripty version of the same notebook is also available in the same directory [source/BRAID/example/BRAID_tutorial.py](source/BRAID/example/BRAID_tutorial.py)
 
 # Usage examples
-The following are the key classes that are used to implement BRAID formulation as explained in [source/BRAID/BRAIDModelDoc.md] (the code for these key classes is also available in the same directory):
+The following are the key classes that are used to implement BRAID formulation as explained in [source/BRAID/BRAIDModelDoc.md](source/BRAID/BRAIDModelDoc.md) (the code for these key classes is also available in the same directory):
 
 - `BRAIDModel`(./source/BRAID/BRAIDModel.py): The full BRAID model class for fitting and inference including the optional preprocessing stage and post-learning stage 3. BRAID's main 2 stages are implemented in a separate class named MainModel in [source/BRAID/MainModel.py].
 
@@ -23,7 +23,7 @@ The following are the key classes that are used to implement BRAID formulation a
 
 
 # License
-Copyright (c) 2025 University of Southern California
-See full notice in [LICENSE.md](LICENSE.md)
-Parsa Vahidi, Omid G. Sani and Maryam M. Shanechi
+Copyright (c) 2025 University of Southern California\
+See full notice in [LICENSE.md](LICENSE.md)\
+Parsa Vahidi, Omid G. Sani and Maryam M. Shanechi\
 Shanechi Lab, University of Southern California
