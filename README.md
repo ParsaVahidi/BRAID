@@ -1,8 +1,8 @@
 # Publication:
 This repository introduces and provides BRAID (**Behavioraly relevant Analysis of Intrinsic Dynamics**)
 
-Parsa Vahidi, Omid G. Sani, and Maryam Shanechi. *BRAID: Input-driven nonlinear dynamical modeling of neural behavioral data.* **In The Thirteenth International Conference on Learning
-Representations**, 2025. URL https://openreview.net/forum?id=3usdM1AuI3.*
+Parsa Vahidi, Omid G. Sani, and Maryam Shanechi. *BRAID: Input-driven nonlinear dynamical modeling of neural behavioral data.* ***In The Thirteenth International Conference on Learning
+Representations***, 2025. URL https://openreview.net/forum?id=3usdM1AuI3.*
 
 # Usage examples
 The following notebook contains usage examples of BRAID for several use-cases:
