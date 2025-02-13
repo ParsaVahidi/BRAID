@@ -1,7 +1,10 @@
 # Publication:
-This repository provides implementation of BRAID (**Behavioraly relevant Analysis of Intrinsic Dynamics**)
+This repositoryintroduces and provides the implementation of BRAID (**Behavioraly relevant Analysis of Intrinsic Dynamics**)
 
-*Input-driven nonlinear dynamical modeling of neural behavioral data*. ***Under revision*** (2024).
+*BRAID: Input-driven nonlinear dynamical modeling of neural behavioral data*. ***Under revision*** (2024).
+
+*Parsa Vahidi, Omid G. Sani, and Maryam Shanechi. BRAID: Input-driven nonlinear dynamical modeling of neural behavioral data. In The Thirteenth International Conference on Learning
+Representations, 2025. URL https://openreview.net/forum?id=3usdM1AuI3.*
 
 # Usage examples
 The following notebook contains usage examples of BRAID for several use-cases:
@@ -12,8 +15,10 @@ A .py scripty version of the same notebook is also available in the same directo
 # Usage examples
 The following are the key classes that are used to implement BRAID formulation as explained in [source/BRAID/BRAIDModelDoc.md] (the code for these key classes is also available in the same directory):
 
-- `BRAIDModel`(./source/BRAID/BRAIDModel.py): performs the full 2-stage modeling with the optional preprocessing stage. BRAID's main 2 stages are implemented in a separated class named MainModel in [source/BRAID/MainModel.py].
+- `BRAIDModel`(./source/BRAID/BRAIDModel.py): The full BRAID model class for fitting and inference including the optional preprocessing stage and post-learning stage 3. BRAID's main 2 stages are implemented in a separate class named MainModel in [source/BRAID/MainModel.py].
 
--  `RNNModel`(./source/BRAID/RNNModel.py): The custom RNN class, which implements the RNNs that are trained in stages 1, 2 (and the preprocessing/stage 3 stpes if used). 
+- `MainModel`(./source/BRAID/MainModel.py): BRAID's main 2 stages implemented in a separate class. The BRAIDModel object build a MainModel object internally to perform stage 1 and 2.
 
--  `RegressionModel`(./source/BRAID/RegressionModel.py): The class internally used by both `RNNModel` and `MainModel` to build the general multilayer feed-forward neural networks that are used to implement each model parameter. 
+- `RNNModel`(./source/BRAID/RNNModel.py): The custom RNN class, which implements the RNNs that are trained in stages 1, 2 (and the preprocessing/stage 3 stpes if used). 
+
+- `RegressionModel`(./source/BRAID/RegressionModel.py): The class internally used by both `RNNModel` and `MainModel` to build the general multilayer feed-forward neural networks that are used to implement each model parameter. 
