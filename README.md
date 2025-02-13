@@ -14,6 +14,6 @@ The following are the key classes that are used to implement BRAID formulation a
 
 - `BRAIDModel`(./source/BRAID/BRAIDModel.py): performs the full 2-stage modeling with the optional preprocessing stage. BRAID's main 2 stages are implemented in a separated class named MainModel in [source/BRAID/MainModel.py].
 
--  `RNNModel`(./source/BRAID/RNNModel.py): The custom RNN class, which implements the RNNs that are trained in stages 1, 2 (and the preprocessing stage if used). 
+-  `RNNModel`(./source/BRAID/RNNModel.py): The custom RNN class, which implements the RNNs that are trained in stages 1, 2 (and the preprocessing/stage 3 stpes if used). 
 
 -  `RegressionModel`(./source/BRAID/RegressionModel.py): The class internally used by both `RNNModel` and `MainModel` to build the general multilayer feed-forward neural networks that are used to implement each model parameter. 
