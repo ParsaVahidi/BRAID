@@ -6,7 +6,10 @@ BRAID has two main stages, each incorporating two recursions implemented by `Mai
 
 Note BRAID can learn two sets of recursions termed ''predictior'' and ''generator''. The predictor ($RNN$) learns inference of 1-step-ahead predicted latents'observations as outlined in this document. The generative model ($RNN_{fw}$) propagates the latents inferred by $RNN$ ahead in time to generate data accroding to the learned intrinsic dynamics of mapping $A_{fw}$. Here for brevity we provide formulations in terms of the predictor model. Please refer to the manuscript for more details.
 
-1. In stage 1, we learn the parameters $A^{(1)}(\cdot)$/$A^{(1)}_{fw}(\cdot)$, $K^{(1)}(\cdot)$/$K^{(1)}_{fw}(\cdot)$, $C^{(1)}_z(\cdot)$ of the following $RNN$/$RNN_{fw}$:
+1. In stage 1, we learn the parameters `A^{(1)}(\cdot)` / `A^{(1)}_{fw}(\cdot)`, `K^{(1)}(\cdot)` / `K^{(1)}_{fw}(\cdot)`, `C^{(1)}_z(\cdot)` of the following `RNN` / `RNN_{fw}`
+
+
+   $A^{(1)}(\cdot)$/$A^{(1)}_{fw}(\cdot)$, $K^{(1)}(\cdot)$/$K^{(1)}_{fw}(\cdot)$, $C^{(1)}_z(\cdot)$ of the following $RNN$/$RNN_{fw}$:
 
     RNN 1:
 
