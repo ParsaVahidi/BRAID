@@ -50,7 +50,7 @@ to learn all neural-relevant dynamics i.e., x^{(0)}_k. Then a readout from these
 
 $$\hat{z}_k = C_z^{(0)}( x^{(0)}_k)$$
 
-# Forcasting with generative RNNs learned via multi-step-ahead optimization
+# Forecasting with generative RNNs learned via multi-step-ahead optimization
 MainModel can simultaneously optimize predictions of multiple steps ahead in the future. For example if the parameter step_ahead is set to [1,2,3], then the loss function includes 1-step, 2-step and 3-step ahead predicition of $z_k$ and $y_k$. This holds for the second stage and preprocessing stage explained below as well. In case user specifies optimization of multi-steps-ahead (parameter steps_ahead), then a generative recursion will be additionally learned for each starge to propagate dynamics forward in time with paramteres $A_{fw}(.)$ and $K_{fw}(.)$  complementing the inferred 1-step-ahead predictions. Please refer to **Methods** section in the manuscript for details.
 
 # Objective function of each optimization step
